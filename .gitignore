@@ -1,0 +1,8 @@
+#ignore training data
+enron*/
+
+#all the models being trained
+/model*
+
+#the compiled instance
+*.pyc

@@ -43,8 +43,9 @@ def main(argv):
         for f in features:
           weights[f] += learning_rate * error
     print('-' * 20)
-    print "iteration: ", i + 1
-    print "train errors: ", error_count
+    if (i%10 == 0):
+        print "iteration: ", i + 1
+        print "train errors: ", error_count
   print "number of instances: ", len(files_labels)
   with open(opts.model, 'w') as modelfile:
     json.dump(weights, modelfile)
